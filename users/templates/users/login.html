@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="container">
+ <form method="post">
+ <!-- mandatory while using the form tag 
+    (cross-site-request-forgery token)-->
+{% csrf_token %}
+<fieldset class="form-group">
+<legend class="border-bottom mb-4">Log In</legend>
+{{ form.as_p }}
+   
+</fieldset>
+<div class="container">
+    <button type="submit">Login</button>
+</div>
+</form>
+</div>
+{% endblock content %}
